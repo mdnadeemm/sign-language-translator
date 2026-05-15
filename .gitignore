@@ -1,0 +1,19 @@
+# Node / React
+node_modules/
+/dist/
+/build/
+.vite/
+.env
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+*.egg-info/
+*.egg
+*.env
+*.env.*
