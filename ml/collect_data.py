@@ -12,9 +12,8 @@ hands = mp_hands.Hands(static_image_mode=False, max_num_hands=1, min_detection_c
 
 # Setup CSV
 DATA_FILE = 'landmarks.csv'
-labels = ['A', 'B', 'C'] # Classes to collect
-print(f"Ready to collect data for: {labels}")
-print("Press 'A', 'B', or 'C' on your keyboard to capture a frame for that class.")
+print("Ready to collect data for any letter (A-Z) or digit (0-9).")
+print("Press any letter or digit key on your keyboard to capture a frame for that class.")
 print("Press 'Q' to quit.")
 
 cap = cv2.VideoCapture(0)
@@ -63,7 +62,7 @@ try:
         
         if key == ord('q'):
             break
-        elif key in [ord('a'), ord('b'), ord('c')]:
+        elif (ord('a') <= key <= ord('z')) or (ord('0') <= key <= ord('9')):
             if len(landmarks_row) == 63: # 21 landmarks * 3 coordinates
                 char = chr(key).upper()
                 row = [char] + landmarks_row

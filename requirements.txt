@@ -1,0 +1,10 @@
+# Backend Dependencies
+fastapi
+uvicorn[standard]
+
+# ML / Data Collection Dependencies
+opencv-python
+mediapipe
+pandas
+numpy
+scikit-learn
